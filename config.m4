@@ -7,8 +7,12 @@ AC_DEFUN([AC_PDO_OCI_VERSION],[
   if test -s "$PDO_OCI_DIR/orainst/unix.rgs"; then
     PDO_OCI_VERSION=`grep '"ocommon"' $PDO_OCI_DIR/orainst/unix.rgs | sed 's/[ ][ ]*/:/g' | cut -d: -f 6 | cut -c 2-4`
     test -z "$PDO_OCI_VERSION" && PDO_OCI_VERSION=7.3
+  elif test -f $PDO_OCI_DIR/lib/libclntsh.$SHLIB_SUFFIX_NAME.12.1; then
+    PDO_OCI_VERSION=12.1
+  elif test -f $PDO_OCI_DIR/lib/libclntsh.$SHLIB_SUFFIX_NAME.11.2; then
+    PDO_OCI_VERSION=11.2
   elif test -f $PDO_OCI_DIR/lib/libclntsh.$SHLIB_SUFFIX_NAME.10.1; then
-    PDO_OCI_VERSION=10.1    
+    PDO_OCI_VERSION=10.1
   elif test -f $PDO_OCI_DIR/lib/libclntsh.$SHLIB_SUFFIX_NAME.9.0; then
     PDO_OCI_VERSION=9.0
   elif test -f $PDO_OCI_DIR/lib/libclntsh.$SHLIB_SUFFIX_NAME.8.0; then
@@ -125,6 +129,9 @@ You need to tell me where to find your oracle SDK, or set ORACLE_HOME.
       PHP_ADD_LIBRARY(clntsh, 1, PDO_OCI_SHARED_LIBADD)
       ;;
     11.2)
+      PHP_ADD_LIBRARY(clntsh, 1, PDO_OCI_SHARED_LIBADD)
+      ;;
+    12.1)
       PHP_ADD_LIBRARY(clntsh, 1, PDO_OCI_SHARED_LIBADD)
       ;;
     *)
