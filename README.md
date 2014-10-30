@@ -4,7 +4,6 @@ pdo_oci
 The original version of PDO_OCI <http://php.net/manual/ja/ref.pdo-oci.php> 
 is still experimental state since 2005. Forgotten? 
 This repository provides patched version of PDO_OCI which runs on php-5.6.
-(This Repository is under construction):
 
 * Fixed config.m4 for 64bit version.
 * Character string will be truncated 
@@ -16,7 +15,7 @@ This repository provides patched version of PDO_OCI which runs on php-5.6.
 
 PDO_OCI の元のバージョン <http://php.net/manual/ja/ref.pdo-oci.php> 
 は 2005 年から experimental のままで放置されているので救済するものです。
-以下のパッチを当てています（注：まだリポジトリ作成途中です）。
+以下のパッチを当てています。
 
 * config.m4 を 64bit でも通るようにした。
 * ORACLE 側のエンコーディングが SJIS でクライアント側が UTF-8 の場合、
