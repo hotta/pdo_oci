@@ -505,7 +505,7 @@ static int oci_stmt_describe(pdo_stmt_t *stmt, int colno TSRMLS_DC) /* {{{ */
 			(param, OCI_DTYPE_PARAM, &colname, &namelen, OCI_ATTR_NAME, S->err));
 
 	col->precision = scale;
-	col->maxlen = data_size;
+	col->maxlen = data_size * 3;
 	col->namelen = namelen;
 	col->name = estrndup(colname, namelen);
 
