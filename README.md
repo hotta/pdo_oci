@@ -1,7 +1,7 @@
 pdo_oci
 =======
 
-The original version of PDO_OCI <http://php.net/manual/ja/ref.pdo-oci.php> 
+The original version of PDO_OCI <http://php.net/manual/en/ref.pdo-oci.php> 
 is still experimental state since 2005. Forgotten? 
 This repository provides patched version of PDO_OCI which runs on php-5.6.
 
